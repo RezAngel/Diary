@@ -1,13 +1,13 @@
 {
-  "name": "Private Diary",
+  "name": "My Private Diary",
   "short_name": "Diary",
-  "start_url": ".",
+  "start_url": "/Diary/",
   "display": "standalone",
-  "background_color": "#1e1e2f",
-  "theme_color": "#1e1e2f",
+  "background_color": "#f6f4ff",
+  "theme_color": "#7c6cff",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/3652/3652191.png",
+      "src": "https://cdn-icons-png.flaticon.com/512/3176/3176363.png",
       "sizes": "512x512",
       "type": "image/png"
     }
