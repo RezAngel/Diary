@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Diary</title>
+
+<link rel="manifest" href="manifest.json">
+
+<style>
+:root {
+  --bg-light: #f6f4ff;
+  --bg-dark: #121212;
+  --text-light: #111;
+  --text-dark: #eee;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #7c6cff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <h2>🌙 My Private Diary</h2>
+
+  <textarea id="entry" placeholder="Write your thoughts..."></textarea>
+
+  <button onclick="save()">💾 Save</button>
+  <button onclick="toggle()">🌗 Light / Dark</button>
+</div>
+
+<script>
+const entry = document.getElementById("entry");
+entry.value = localStorage.getItem("diary") || "";
+
+function save() {
+  localStorage.setItem("diary", entry.value);
+  alert("Saved 💜");
+}
+
+function toggle() {
+  document.body.classList.toggle("dark");
+}
+</script>
+</body>
+</html>
