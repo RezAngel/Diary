@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Private Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+
+  <meta name="theme-color" content="#1f1f1f" />
+</head>
+<body>
+
+  <header>
+    <h1>🌙 My Diary</h1>
+    <button id="installBtn" hidden>Install App</button>
+  </header>
+
+  <textarea id="entry" placeholder="Write your thoughts..."></textarea>
+
+  <button onclick="saveEntry()">Save</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
